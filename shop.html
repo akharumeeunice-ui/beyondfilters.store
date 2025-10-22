@@ -1,49 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Buy the eBook | Beyond Filters</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beyond Filters | eBook Purchase</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
-    body { font-family: Arial, sans-serif; background: #f9f9f9; margin: 0; padding: 0; }
-    .container { max-width: 700px; margin: 40px auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-    h1 { text-align: center; color: #333; }
-    p { color: #555; line-height: 1.6; }
-    .price { font-size: 20px; font-weight: bold; color: #000; margin: 15px 0; text-align: center; }
-    .wallet-box { background: #f1f1f1; padding: 15px; border-radius: 8px; word-break: break-all; margin: 15px 0; text-align: center; }
-    .note { font-size: 14px; color: #666; margin-top: 20px; text-align: center; }
+    :root {
+      --primary: #4a00e0;
+      --secondary: #8e2de2;
+      --accent: #27ae60;
+      --light: #f9f9fb;
+      --dark: #1f1f1f;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, var(--secondary), var(--primary));
+      color: var(--dark);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    .card {
+      background: white;
+      max-width: 700px;
+      width: 100%;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      text-align: center;
+      animation: fadeIn 0.7s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      color: var(--primary);
+      font-size: 1.9rem;
+      margin-bottom: 15px;
+    }
+
+    p {
+      color: #444;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .price {
+      font-size: 1.3rem;
+      color: var(--secondary);
+      font-weight: 600;
+      margin-bottom: 25px;
+    }
+
+    .btn {
+      background: linear-gradient(135deg, var(--secondary), var(--primary));
+      color: white;
+      border: none;
+      padding: 14px 28px;
+      border-radius: 30px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+    }
+
+    .info-card {
+      background: var(--light);
+      border-left: 5px solid var(--primary);
+      padding: 20px;
+      border-radius: 12px;
+      text-align: left;
+      margin: 20px 0;
+    }
+
+    .info-card h3 {
+      color: var(--primary);
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+    }
+
+    code {
+      background: #f3f3f3;
+      padding: 6px 10px;
+      border-radius: 6px;
+      display: inline-block;
+      font-size: 0.95rem;
+    }
+
+    .highlight {
+      background: #e8f5e9;
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 25px;
+    }
+
+    .highlight h3 {
+      color: var(--accent);
+    }
+
+    .note {
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: 25px;
+    }
+
+    footer {
+      margin-top: 35px;
+      font-size: 0.85rem;
+      color: #999;
+    }
+
+    @media (max-width: 600px) {
+      .card { padding: 25px; }
+      h1 { font-size: 1.5rem; }
+    }
   </style>
 </head>
 <body>
-  <div class="container">
+  <div class="card">
     <h1>📖 Beyond Filters: The New Identity Crisis</h1>
-    <p>This eBook explores how social media affects identity, mental health, and self-image — with practical and faith-based strategies to help you live authentically beyond the screen.</p>
-    <div class="price">Price: 2.5 USDT (ERC20) or 3500 naira</div>
+    <p>Discover how social media shapes our identity and mental health — and learn faith-based strategies to live authentically beyond the screen.</p>
+    <div class="price">💰 Price: 2.5 USDT (ERC20) or ₦3500</div>
+    <a href="mailto:euniceakharume@gmail.com" class="btn">Buy Now</a>
 
-    <p>👉 To purchase, send <b>2.5 USDT (ERC20) or 3500 naira </b> to the wallet address below:</p>
-    <div class="wallet-box">
-      <b>WALLET ADDRESS:</b><br>
+    <div class="info-card">
+      <h3>💳 Crypto Payment</h3>
+      <p>Send <strong>2.5 USDT (ERC20)</strong> to:</p>
       <code>0x94aef66663842cfd2bfb5f7f73d5205b35827af1</code>
     </div>
-<div style="margin-top: 25px; padding: 18px; background: #f2f2f2; border-radius: 10px; text-align: left;">
-  <h3 style="color:#111;">Prefer Bank Transfer?</h3>
-  <p><strong>Bank name:</strong> Access Bank</p>
-  <p><strong>Account name:</strong> Eunice Akharume</p>
-  <p><strong>account number:</strong> 1903510588</p>
-  <p style="color:#555;">After payment, send your name and proof of payment to 
-     <a href=<a href="mailto:euniceakharume@gmail.com">euniceakharume@gmail.com</a>
-</a> to receive your eBook.</p>
-</div>
-    <div class="wallet-box">
-    </div>
-<div style="margin-top: 30px; padding: 18px; background: #e8f5e9; border-radius: 10px; text-align: center;">
-  <h3 style="color:#1b5e20;">💚 Giving Back</h3>
-  <p style="color:#2e7d32; font-size: 16px;">
-    50% of every sale goes toward supporting mental health awareness and youth empowerment initiatives.
-  </p>
-</div>
 
-    <p class="note">⏳ You will receive the eBook PDF in your inbox within 24 hours.</p>
+    <div class="info-card">
+      <h3>🏦 Bank Transfer</h3>
+      <p><strong>Bank:</strong> Access Bank<br>
+         <strong>Account Name:</strong> Eunice Akharume<br>
+         <strong>Account Number:</strong> 1903510588</p>
+      <p>After payment, send your name and proof to 
+        <a href="mailto:euniceakharume@gmail.com">euniceakharume@gmail.com</a>
+        to receive your eBook.
+      </p>
+    </div>
+
+    <div class="highlight">
+      <h3>💚 Giving Back</h3>
+      <p>50% of every sale supports mental health awareness and youth empowerment programs.</p>
+    </div>
+
+    <p class="note">⏳ You’ll receive your eBook PDF within 24 hours of payment confirmation.</p>
+
+    <footer>© 2025 Beyond Filters. All rights reserved.</footer>
   </div>
 </body>
 </html>
