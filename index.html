@@ -10,8 +10,8 @@
       --primary: #8e2de2;
       --secondary: #4a00e0;
       --accent: #27ae60;
-      --dark: #1f1f1f;
-      --light: #f9f9fb;
+      --dark: #111;
+      --light: #fafafa;
     }
 
     * {
@@ -27,53 +27,48 @@
       overflow-x: hidden;
     }
 
-    /* Hero */
-    header {
+    /* Hero Section */
+    .hero {
       background: linear-gradient(135deg, var(--secondary), var(--primary));
       color: white;
       text-align: center;
-      padding: 80px 20px;
+      padding: 100px 20px 80px;
     }
 
-    header h1 {
-      font-size: 2.5rem;
+    .hero h1 {
+      font-size: 2.8rem;
       margin-bottom: 15px;
-      animation: fadeDown 1s ease-in;
     }
 
-    header p {
-      font-size: 1.1rem;
+    .hero p {
       max-width: 650px;
       margin: 0 auto 30px;
+      font-size: 1.1rem;
       opacity: 0.9;
+      line-height: 1.6;
     }
 
-    .cta-btn {
+    .hero .cta-btn {
       background: white;
       color: var(--primary);
-      padding: 14px 28px;
+      padding: 14px 30px;
       border-radius: 30px;
       font-weight: 600;
       text-decoration: none;
-      transition: all 0.3s ease;
+      transition: 0.3s;
     }
 
-    .cta-btn:hover {
+    .hero .cta-btn:hover {
       transform: scale(1.05);
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
     }
 
-    .book-image {
-      width: 220px;
-      margin-top: 40px;
-      border-radius: 12px;
+    .hero img {
+      margin-top: 50px;
+      width: 240px;
+      border-radius: 15px;
       box-shadow: 0 10px 25px rgba(0,0,0,0.3);
       animation: float 3s ease-in-out infinite;
-    }
-
-    @keyframes fadeDown {
-      from { opacity: 0; transform: translateY(-30px); }
-      to { opacity: 1; transform: translateY(0); }
     }
 
     @keyframes float {
@@ -83,25 +78,24 @@
 
     /* About Section */
     .about {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
       max-width: 1100px;
-      margin: 80px auto;
-      padding: 0 20px;
+      margin: 100px auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       align-items: center;
+      gap: 40px;
+      padding: 0 20px;
     }
 
     .about img {
       width: 100%;
       border-radius: 15px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
     }
 
     .about-text h2 {
       color: var(--secondary);
       margin-bottom: 15px;
-      font-size: 1.8rem;
     }
 
     .about-text p {
@@ -109,59 +103,101 @@
       line-height: 1.8;
     }
 
-    /* Payment Section */
-    .payment {
+    /* Benefits Section */
+    .benefits {
       background: white;
+      padding: 80px 20px;
       text-align: center;
-      padding: 70px 20px;
-      border-top: 1px solid #eee;
     }
 
-    .payment h2 {
+    .benefits h2 {
       color: var(--primary);
-      margin-bottom: 30px;
-      font-size: 1.9rem;
+      margin-bottom: 40px;
     }
 
-    .pay-cards {
+    .benefit-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-      max-width: 900px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      max-width: 1000px;
       margin: 0 auto;
     }
 
-    .card {
+    .benefit-card {
       background: var(--light);
-      padding: 25px;
       border-radius: 15px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-      transition: all 0.3s ease;
+      padding: 25px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      transition: 0.3s;
     }
 
-    .card:hover {
+    .benefit-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
     }
 
-    .card h3 {
+    .benefit-card h3 {
       color: var(--secondary);
       margin-bottom: 10px;
     }
 
-    .card code {
-      background: #f2f2f2;
+    /* Payment Section */
+    .payment {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    .payment h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+
+    .pay-boxes {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .pay-card {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      padding: 25px;
+      backdrop-filter: blur(8px);
+      transition: 0.3s;
+    }
+
+    .pay-card:hover {
+      transform: translateY(-5px);
+      background: rgba(255,255,255,0.15);
+    }
+
+    .pay-card h3 {
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .pay-card p {
+      color: #eee;
+      line-height: 1.6;
+    }
+
+    .pay-card code {
+      background: rgba(255,255,255,0.15);
+      display: inline-block;
       padding: 6px 10px;
       border-radius: 8px;
-      display: inline-block;
-      font-size: 0.9rem;
+      margin-top: 10px;
+      color: #fff;
     }
 
     /* Giving Back */
     .giving {
       background: #e8f5e9;
-      padding: 60px 20px;
       text-align: center;
+      padding: 80px 20px;
     }
 
     .giving h2 {
@@ -172,8 +208,8 @@
     .giving p {
       max-width: 700px;
       margin: 0 auto;
-      line-height: 1.7;
       color: #2e7d32;
+      line-height: 1.7;
     }
 
     /* Footer */
@@ -193,65 +229,86 @@
     footer a:hover {
       text-decoration: underline;
     }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2rem; }
+      .hero img { width: 200px; }
+    }
   </style>
 </head>
 <body>
 
-  <!-- HERO -->
-  <header>
-    <h1>📖 Beyond Filters: The New Identity Crisis</h1>
-    <p>Discover how social media shapes our identity and mental health — and learn practical and faith-based strategies to live authentically beyond the screen.</p>
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Beyond Filters: The New Identity Crisis</h1>
+    <p>Explore how social media influences our sense of self and learn to reclaim your authenticity through faith and mindful living.</p>
     <a href="#buy" class="cta-btn">Buy the eBook</a>
-    <br />
-    <img src="https://via.placeholder.com/220x300.png?text=Beyond+Filters+eBook" alt="Beyond Filters eBook Cover" class="book-image" />
-  </header>
+    <br>
+    <img src="https://via.placeholder.com/240x320.png?text=Beyond+Filters+eBook" alt="Beyond Filters eBook">
+  </section>
 
-  <!-- ABOUT -->
+  <!-- About -->
   <section class="about">
     <div class="about-text">
       <h2>About the Book</h2>
       <p>
-        <b>Beyond Filters</b> goes beyond the curated perfection of social media to explore the deeper truth of self-worth, faith, and mental well-being.
-        Packed with insight, stories, and practical steps, this eBook helps you rediscover who you are — beyond likes, filters, and online validation.
+        <b>Beyond Filters</b> dives deep into the intersection of social media, faith, and identity — revealing how to build confidence that’s rooted in purpose, not perception.
+        Whether you're struggling with self-image or seeking authenticity in a filtered world, this book will guide you with practical, relatable insights.
       </p>
     </div>
-    <img src="https://via.placeholder.com/450x350.png?text=Inside+the+Book" alt="Inside the Book" />
+    <img src="https://via.placeholder.com/450x350.png?text=Inside+the+Book" alt="Inside the Book">
   </section>
 
-  <!-- PAYMENT -->
-  <section class="payment" id="buy">
-    <h2>Purchase the eBook</h2>
-    <div class="pay-cards">
-      <div class="card">
-        <h3>💳 Crypto (USDT)</h3>
-        <p>Send <strong>2.5 USDT (ERC20)</strong> to the address below:</p>
-        <code>0x94aef66663842cfd2bfb5f7f73d5205b35827af1</code>
+  <!-- Benefits -->
+  <section class="benefits">
+    <h2>Why You’ll Love This eBook</h2>
+    <div class="benefit-grid">
+      <div class="benefit-card">
+        <h3>💭 Authentic Living</h3>
+        <p>Learn to embrace your real self beyond online appearances.</p>
       </div>
-
-      <div class="card">
-        <h3>🏦 Bank Transfer</h3>
-        <p>
-          <strong>Bank:</strong> Access Bank<br>
-          <strong>Account Name:</strong> Eunice Akharume<br>
-          <strong>Account Number:</strong> 1903510588
-        </p>
-        <p>After payment, send proof to <a href="mailto:euniceakharume@gmail.com">euniceakharume@gmail.com</a></p>
+      <div class="benefit-card">
+        <h3>🧠 Mental Clarity</h3>
+        <p>Practical steps to protect your mental health in the digital world.</p>
+      </div>
+      <div class="benefit-card">
+        <h3>🙏 Faith-Based Guidance</h3>
+        <p>Find peace through spiritual perspective and wisdom.</p>
       </div>
     </div>
   </section>
 
-  <!-- GIVING BACK -->
-  <section class="giving">
-    <h2>💚 Giving Back</h2>
-    <p>50% of all sales go toward supporting mental health awareness and youth empowerment programs. Every purchase helps create a healthier, more authentic world.</p>
+  <!-- Payment -->
+  <section class="payment" id="buy">
+    <h2>Get Your Copy Today</h2>
+    <div class="pay-boxes">
+      <div class="pay-card">
+        <h3>💳 Pay with USDT</h3>
+        <p>Send <strong>2.5 USDT (ERC20)</strong> to:</p>
+        <code>0x94aef66663842cfd2bfb5f7f73d5205b35827af1</code>
+      </div>
+      <div class="pay-card">
+        <h3>🏦 Bank Transfer</h3>
+        <p><strong>Bank:</strong> Access Bank<br>
+           <strong>Account Name:</strong> Eunice Akharume<br>
+           <strong>Account Number:</strong> 1903510588</p>
+        <p>After payment, send proof to 
+           <a href="mailto:euniceakharume@gmail.com" style="color:#fff;text-decoration:underline;">euniceakharume@gmail.com</a></p>
+      </div>
+    </div>
   </section>
 
-  <!-- FOOTER -->
+  <!-- Giving Back -->
+  <section class="giving">
+    <h2>💚 Giving Back</h2>
+    <p>50% of every sale goes to supporting mental health awareness and youth empowerment. Every purchase makes an impact.</p>
+  </section>
+
+  <!-- Footer -->
   <footer>
-    © 2025 Beyond Filters. All rights reserved. | Contact: 
+    © 2025 Beyond Filters | Designed with 💜 | Contact:
     <a href="mailto:euniceakharume@gmail.com">euniceakharume@gmail.com</a>
   </footer>
 
 </body>
 </html>
-
