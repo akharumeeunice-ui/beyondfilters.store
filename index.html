@@ -3,57 +3,52 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Beyond Filters | The New Identity Crisis</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <title>Win the War Within | Eunice Akharume</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Raleway:wght@400;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary: #8e2de2;
-      --secondary: #4a00e0;
-      --accent: #27ae60;
-      --text: #222;
-      --light: #fafafa;
+      --bg: #0b0b0b;
+      --text: #f5f0e6;
+      --accent: #d4af37;
+      --muted: #aaa;
     }
 
-    * {margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif;}
-    body {background: var(--light); color: var(--text); overflow-x:hidden;}
+    * {margin:0; padding:0; box-sizing:border-box;}
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Raleway', sans-serif;
+      overflow-x: hidden;
+    }
 
-    /* ===== HERO SECTION ===== */
     header {
-      background: linear-gradient(135deg, var(--secondary), var(--primary));
-      color: #fff;
       text-align: center;
-      padding: 100px 20px 80px;
+      padding: 100px 20px 60px;
+      background: radial-gradient(circle at center, #1b1b1b 0%, #0b0b0b 80%);
     }
 
-    header h1 {font-size:2.8rem; margin-bottom:20px;}
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      letter-spacing: 2px;
+      color: var(--accent);
+      margin-bottom: 15px;
+    }
+
     header p {
-      max-width:680px;
-      margin:0 auto 30px;
-      font-size:1.1rem;
-      opacity:0.9;
-      line-height:1.6;
-    }
-
-    .cta {
-      background:#fff;
-      color:var(--primary);
-      font-weight:600;
-      text-decoration:none;
-      padding:14px 32px;
-      border-radius:40px;
-      transition:all .3s ease;
-    }
-    .cta:hover {
-      transform:scale(1.05);
-      box-shadow:0 10px 25px rgba(0,0,0,0.15);
+      max-width: 700px;
+      margin: 0 auto;
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 1.05rem;
     }
 
     .book-img {
-      margin-top:40px;
-      width:230px;
-      border-radius:15px;
-      box-shadow:0 10px 25px rgba(0,0,0,0.25);
-      animation:float 3s ease-in-out infinite;
+      margin-top: 50px;
+      width: 270px;
+      border-radius: 8px;
+      box-shadow: 0 0 40px rgba(212,175,55,0.25);
+      animation: float 4s ease-in-out infinite;
     }
 
     @keyframes float {
@@ -61,191 +56,110 @@
       50%{transform:translateY(-10px);}
     }
 
-    /* ===== ABOUT SECTION ===== */
-    section.about {
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-      align-items:center;
-      gap:40px;
-      max-width:1100px;
-      margin:100px auto;
-      padding:0 20px;
+    section {
+      max-width: 900px;
+      margin: 80px auto;
+      padding: 0 20px;
+      text-align: center;
     }
 
-    .about img {
-      width:100%;
-      border-radius:15px;
-      box-shadow:0 6px 18px rgba(0,0,0,0.1);
+    section h2 {
+      font-family: 'Playfair Display', serif;
+      color: var(--accent);
+      font-size: 2rem;
+      margin-bottom: 20px;
     }
 
-    .about h2 {color:var(--secondary); margin-bottom:15px;}
-    .about p {line-height:1.8; color:#444;}
-
-    /* ===== BENEFITS ===== */
-    section.benefits {
-      background:#fff;
-      padding:80px 20px;
-      text-align:center;
+    section p {
+      line-height: 1.8;
+      color: var(--muted);
+      font-size: 1rem;
     }
 
-    .benefits h2 {
-      color:var(--primary);
-      margin-bottom:40px;
+    .wallet-box {
+      background: #1b1b1b;
+      border: 1px solid rgba(212,175,55,0.3);
+      border-radius: 10px;
+      padding: 25px;
+      margin-top: 40px;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(212,175,55,0.1);
     }
 
-    .benefit-grid {
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-      gap:25px;
-      max-width:1000px;
-      margin:0 auto;
-    }
-
-    .benefit-card {
-      background:var(--light);
-      border-radius:15px;
-      padding:30px;
-      box-shadow:0 6px 18px rgba(0,0,0,0.08);
-      transition:.3s;
-    }
-    .benefit-card:hover {transform:translateY(-6px);}
-    .benefit-card h3 {color:var(--secondary); margin-bottom:10px;}
-
-    /* ===== PAYMENT SECTION ===== */
-    section.payment {
-      background:linear-gradient(135deg,var(--primary),var(--secondary));
-      color:#fff;
-      text-align:center;
-      padding:100px 20px;
-    }
-
-    .payment h2 {font-size:2rem; margin-bottom:30px;}
-    .pay-grid {
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-      gap:30px;
-      max-width:800px;
-      margin:0 auto;
-    }
-
-    .pay-card {
-      background:rgba(255,255,255,0.1);
-      border-radius:15px;
-      padding:25px;
-      backdrop-filter:blur(10px);
-      transition:.3s;
-    }
-    .pay-card:hover {transform:translateY(-6px); background:rgba(255,255,255,0.15);}
-    .pay-card h3 {margin-bottom:10px;}
-    .pay-card p {line-height:1.6;}
     code {
-      background:rgba(255,255,255,0.15);
-      padding:6px 10px;
-      border-radius:8px;
-      display:inline-block;
-      margin-top:8px;
+      display: block;
+      color: var(--accent);
+      background: rgba(255,255,255,0.05);
+      padding: 12px;
+      margin-top: 10px;
+      border-radius: 8px;
+      word-break: break-all;
+      font-size: 0.95rem;
     }
 
-    /* ===== GIVING BACK ===== */
-    section.giving {
-      background:#e8f5e9;
-      text-align:center;
-      padding:80px 20px;
-    }
-    .giving h2 {color:var(--accent); margin-bottom:10px;}
-    .giving p {
-      max-width:700px;
-      margin:0 auto;
-      color:#2e7d32;
-      line-height:1.7;
-    }
-
-    /* ===== FOOTER ===== */
     footer {
-      background:#111;
-      color:#fff;
-      text-align:center;
-      padding:25px 15px;
-      font-size:.9rem;
+      text-align: center;
+      padding: 40px 15px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      color: var(--muted);
+      font-size: 0.9rem;
     }
-    footer a {color:var(--accent); text-decoration:none;}
-    footer a:hover{text-decoration:underline;}
 
-    @media(max-width:768px){
-      header h1{font-size:2.1rem;}
-      .book-img{width:200px;}
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {font-size: 2.2rem;}
+      .book-img {width: 220px;}
     }
   </style>
 </head>
 <body>
 
-  <!-- HERO -->
   <header>
-    <h1>📖 Beyond Filters: The New Identity Crisis</h1>
-    <p>Discover how social media shapes your identity, mindset, and self-worth — and learn to live authentically through faith, confidence, and purpose.</p>
-    <a href="#buy" class="cta">Buy the eBook</a><br>
-    <img src="https://via.placeholder.com/230x320.png?text=Beyond+Filters+eBook" alt="Beyond Filters eBook" class="book-img">
+    <h1>WIN THE WAR WITHIN</h1>
+    <p>Master Focus, Discipline, and the Mindset for Unstoppable Success.</p>
+    <img src="https://via.placeholder.com/270x400.png?text=Win+the+War+Within+Book+Cover" alt="Win the War Within Book Cover" class="book-img">
   </header>
 
-  <!-- ABOUT -->
-  <section class="about">
-    <div>
-      <h2>About the Book</h2>
-      <p><b>Beyond Filters</b> reveals how the digital age is shaping our sense of worth and how faith helps us find our true identity beyond screens.  
-      With real stories, self-reflection guides, and practical insights, this eBook is a tool for anyone seeking freedom from online pressure and rediscovering purpose.</p>
-    </div>
-    <img src="https://via.placeholder.com/450x350.png?text=Inside+the+Book" alt="Inside the Book">
+  <section>
+    <h2>About the Book</h2>
+    <p><b>Win the War Within</b> is a journey into mastering your mind, overcoming distractions, and achieving purpose-driven focus. Through personal growth insights, discipline-building strategies, and faith-based wisdom, this eBook helps you cultivate the mindset needed to conquer internal struggles and live victoriously.</p>
   </section>
 
-  <!-- BENEFITS -->
-  <section class="benefits">
-    <h2>Why Readers Love It</h2>
-    <div class="benefit-grid">
-      <div class="benefit-card">
-        <h3>💭 Authentic Living</h3>
-        <p>Practical lessons for being true to yourself beyond online validation.</p>
-      </div>
-      <div class="benefit-card">
-        <h3>🧠 Mental Wellness</h3>
-        <p>Understand how to protect your mind in a world of comparison and perfection.</p>
-      </div>
-      <div class="benefit-card">
-        <h3>🙏 Faith & Balance</h3>
-        <p>Find peace and strength through biblical principles and mindfulness.</p>
-      </div>
+  <section>
+    <h2>Purchase Details</h2>
+    <p>You can get your copy by paying through any of the options below:</p>
+
+    <div class="wallet-box">
+      <h3 style="color: var(--accent); margin-bottom: 10px;">💰 USDT (ERC20)</h3>
+      <p>Send <b>2.5 USDT (ERC20)</b> to this wallet address:</p>
+      <code>0x94aef66663842cfd2bfb5f7f73d5205b35827af1</code>
+    </div>
+
+    <div class="wallet-box" style="margin-top:30px;">
+      <h3 style="color: var(--accent); margin-bottom: 10px;">🏦 Bank Transfer</h3>
+      <p><b>Bank:</b> Access Bank<br>
+         <b>Account Name:</b> Eunice Akharume<br>
+         <b>Account Number:</b> 1903510588</p>
+      <p style="margin-top:10px;">After payment, send proof to <a href="mailto:euniceakharume@gmail.com">euniceakharume@gmail.com</a></p>
     </div>
   </section>
 
-  <!-- PAYMENT -->
-  <section class="payment" id="buy">
-    <h2>💰 Get Your Copy</h2>
-    <div class="pay-grid">
-      <div class="pay-card">
-        <h3>💸 Pay with USDT</h3>
-        <p>Send <b>2.5 USDT (ERC20)</b> to this wallet:</p>
-        <code>0x94aef66663842cfd2bfb5f7f73d5205b35827af1</code>
-      </div>
-
-      <div class="pay-card">
-        <h3>🏦 Bank Transfer</h3>
-        <p><b>Bank:</b> Access Bank<br>
-           <b>Account Name:</b> Eunice Akharume<br>
-           <b>Account Number:</b> 1903510588</p>
-        <p>After payment, email proof to <a href="mailto:euniceakharume@gmail.com" style="color:#fff;text-decoration:underline;">euniceakharume@gmail.com</a></p>
-      </div>
-    </div>
-  </section>
-
-  <!-- GIVING BACK -->
-  <section class="giving">
+  <section>
     <h2>💚 Giving Back</h2>
-    <p>50% of all proceeds go to supporting mental health awareness and youth empowerment programs.  
-    Every purchase helps create a healthier, more authentic world.</p>
+    <p>50% of all proceeds support youth empowerment and mental health initiatives.  
+    Every purchase helps someone win their war within.</p>
   </section>
 
-  <!-- FOOTER -->
   <footer>
-    © 2025 Beyond Filters | Designed with 💜 | Contact: 
+    © 2025 <b>Eunice Akharume</b> | Designed with purpose | 
     <a href="mailto:euniceakharume@gmail.com">euniceakharume@gmail.com</a>
   </footer>
 </body>
