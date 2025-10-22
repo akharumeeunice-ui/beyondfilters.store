@@ -1,66 +1,257 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Beyond Filters | The New Identity Crisis</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beyond Filters | Official eBook</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    :root {
+      --primary: #8e2de2;
+      --secondary: #4a00e0;
+      --accent: #27ae60;
+      --dark: #1f1f1f;
+      --light: #f9f9fb;
+    }
+
+    * {
       margin: 0;
       padding: 0;
-      background-color: #f8f8f8;
-      color: #333;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: var(--light);
+      color: var(--dark);
+      overflow-x: hidden;
+    }
+
+    /* Hero */
+    header {
+      background: linear-gradient(135deg, var(--secondary), var(--primary));
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      animation: fadeDown 1s ease-in;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      max-width: 650px;
+      margin: 0 auto 30px;
+      opacity: 0.9;
+    }
+
+    .cta-btn {
+      background: white;
+      color: var(--primary);
+      padding: 14px 28px;
+      border-radius: 30px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .cta-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .book-image {
+      width: 220px;
+      margin-top: 40px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    /* About Section */
+    .about {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      max-width: 1100px;
+      margin: 80px auto;
+      padding: 0 20px;
+      align-items: center;
+    }
+
+    .about img {
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    }
+
+    .about-text h2 {
+      color: var(--secondary);
+      margin-bottom: 15px;
+      font-size: 1.8rem;
+    }
+
+    .about-text p {
+      color: #444;
+      line-height: 1.8;
+    }
+
+    /* Payment Section */
+    .payment {
+      background: white;
+      text-align: center;
+      padding: 70px 20px;
+      border-top: 1px solid #eee;
+    }
+
+    .payment h2 {
+      color: var(--primary);
+      margin-bottom: 30px;
+      font-size: 1.9rem;
+    }
+
+    .pay-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: var(--light);
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    .card h3 {
+      color: var(--secondary);
+      margin-bottom: 10px;
+    }
+
+    .card code {
+      background: #f2f2f2;
+      padding: 6px 10px;
+      border-radius: 8px;
+      display: inline-block;
+      font-size: 0.9rem;
+    }
+
+    /* Giving Back */
+    .giving {
+      background: #e8f5e9;
+      padding: 60px 20px;
       text-align: center;
     }
-    header {
-      background: #222;
-      color: #fff;
-      padding: 20px;
-      font-size: 24px;
+
+    .giving h2 {
+      color: var(--accent);
+      margin-bottom: 15px;
     }
-    .hero {
-      padding: 60px 20px;
+
+    .giving p {
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.7;
+      color: #2e7d32;
     }
-    .hero h1 {
-      font-size: 32px;
-      margin-bottom: 20px;
-    }
-    .hero p {
-      font-size: 18px;
-      max-width: 600px;
-      margin: 0 auto 30px;
-    }
-    .btn {
-      background: #222;
-      color: #fff;
-      padding: 12px 24px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-size: 16px;
-    }
-    .btn:hover {
-      background: #444;
-    }
+
+    /* Footer */
     footer {
-      margin-top: 40px;
-      padding: 20px;
-      font-size: 14px;
-      background: #eee;
+      background: var(--dark);
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <header>Beyond Filters</header>
 
-  <div class="hero">
-    <h1>Beyond Filters — The New Identity Crisis</h1>
-    <p>An eye-opening ebook about social media, self-image, and mental health. Discover how to reclaim your true self in a filtered world.</p>
-    <a href="shop.html" class="btn">Go to Shop</a>
-  </div>
+  <!-- HERO -->
+  <header>
+    <h1>📖 Beyond Filters: The New Identity Crisis</h1>
+    <p>Discover how social media shapes our identity and mental health — and learn practical and faith-based strategies to live authentically beyond the screen.</p>
+    <a href="#buy" class="cta-btn">Buy the eBook</a>
+    <br />
+    <img src="https://via.placeholder.com/220x300.png?text=Beyond+Filters+eBook" alt="Beyond Filters eBook Cover" class="book-image" />
+  </header>
 
+  <!-- ABOUT -->
+  <section class="about">
+    <div class="about-text">
+      <h2>About the Book</h2>
+      <p>
+        <b>Beyond Filters</b> goes beyond the curated perfection of social media to explore the deeper truth of self-worth, faith, and mental well-being.
+        Packed with insight, stories, and practical steps, this eBook helps you rediscover who you are — beyond likes, filters, and online validation.
+      </p>
+    </div>
+    <img src="https://via.placeholder.com/450x350.png?text=Inside+the+Book" alt="Inside the Book" />
+  </section>
+
+  <!-- PAYMENT -->
+  <section class="payment" id="buy">
+    <h2>Purchase the eBook</h2>
+    <div class="pay-cards">
+      <div class="card">
+        <h3>💳 Crypto (USDT)</h3>
+        <p>Send <strong>2.5 USDT (ERC20)</strong> to the address below:</p>
+        <code>0x94aef66663842cfd2bfb5f7f73d5205b35827af1</code>
+      </div>
+
+      <div class="card">
+        <h3>🏦 Bank Transfer</h3>
+        <p>
+          <strong>Bank:</strong> Access Bank<br>
+          <strong>Account Name:</strong> Eunice Akharume<br>
+          <strong>Account Number:</strong> 1903510588
+        </p>
+        <p>After payment, send proof to <a href="mailto:euniceakharume@gmail.com">euniceakharume@gmail.com</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- GIVING BACK -->
+  <section class="giving">
+    <h2>💚 Giving Back</h2>
+    <p>50% of all sales go toward supporting mental health awareness and youth empowerment programs. Every purchase helps create a healthier, more authentic world.</p>
+  </section>
+
+  <!-- FOOTER -->
   <footer>
-    © 2025 Beyond Filters Store | All rights reserved
+    © 2025 Beyond Filters. All rights reserved. | Contact: 
+    <a href="mailto:euniceakharume@gmail.com">euniceakharume@gmail.com</a>
   </footer>
+
 </body>
 </html>
+
